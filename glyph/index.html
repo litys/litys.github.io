@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glyph generator</title>
+	<link rel="stylesheet" href="./css/global.min.css">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="menu">
+
+			<div class="margin_classic">
+				<div>
+					<div class="option">
+						<label for="option_glyphs">How many glyphs</label><br>
+						<input 
+							class="full_width"
+							type="number" 
+							min="1"
+							id="option_glyphs" 
+							value="1"
+						>
+					</div>
+
+					<div class="option">
+						<label>Glyph size</label><br>
+						<div class="full_width flex">
+							<input 
+								class="half_width"
+								type="number" 
+								min="1"
+								id="option_size_width" 
+								value="100"
+							>
+							<input 
+								class="half_width"
+								type="number" 
+								min="1"
+								id="option_size_height" 
+								value="100"
+							>
+						</div>
+					</div>
+
+					<div class="option">
+						<label for="option_glyphs">Curve line probability: <span id="option_curve_show"></span></label><br>
+						<input 
+							class="full_width"
+							type="range" 
+							min="1"
+							max="100"
+							id="option_curve" 
+							value="1"
+							oninput="update_range_curve()"
+						>
+					</div>
+
+					<div class="option">
+						<label>How much lines: <span id="option_lines_show"></span></label><br>
+						<input 
+							class="full_width"
+							type="range" 
+							min="1"
+							max="10"
+							id="option_lines" 
+							value="3"
+							oninput="update_range_line()"
+						>
+						<label for="random_lines">Random number of lines</label><br>
+						<input 
+							type="checkbox" 
+							id="random_lines" 
+							name="scales"
+							onchange="update_random_lines()"
+						>
+					</div>
+
+					<div class="option">
+						<label for="option_color">Color of lines</label><br>
+						<input 
+							class="full_width"
+							type="text"
+							id="option_color"
+							value="black"
+						>
+					</div>
+
+				</div>
+				<div class="generate_btn_container">
+					<button 
+						class="generate_btn"
+						onclick="runScript()"
+					>Generate!</button>
+				</div>
+				<div id="time"></div>
+			</div>
+
+		</div>
+
+		<div id="content"></div>
+
+		<div id="result"></div>
+
+	</div>
+
+	<script src="./js/global.js"></script>
+	
+</body>
+</html>

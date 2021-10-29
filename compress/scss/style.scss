@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+$app_color: #1E3C72;
+$mobile_size: 800px;
+
+body {
+	margin: 0;
+	max-width: 100vw;
+	height: 100%;
+	max-height: 100vh;
+	overflow-x: hidden;
+	word-wrap: break-word;
+}
+html {
+	height: 100%;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: .014rem;
+}
+* {
+	font-family: 'Quicksand', sans-serif;
+	line-height: 1.65em;
+}
+
+@mixin transition {
+	transition: .3s ease-in-out;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#canvas_box {
+	display: none;
+}
+.container {
+	display: flex;
+	width: 100%;
+	min-height: 100%;
+	background-color: $app_color;
+	@media (max-width: $mobile_size){
+		flex-direction: column;
+		height: 100%;
+		border-radius: 0;
+	}
+	.main {
+		background-color: #eee;
+		width: 80%;
+		padding: 25px;
+		@media (max-width: $mobile_size){
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.menu {
+		background-color: #fff;
+		width: 20%;
+		min-width: 300px;
+		padding: 25px 15px;
+		@media (max-width: $mobile_size){
+			width: 100%;
+			order: -1;
+			padding: 15px 8px;
+		}
+	}
+}
+
+.actions {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	.action_row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.actions_btns {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 15px;
+	}
+}
+
+.image {
+	margin: 0 auto;
+	img {
+		width: 150px;
+		height: 150px;
+		object-fit: contain;
+	}
+}
+
+.link {
+	width: 100%;
+	text-align: center;
+}
+.convert_btn {
+	margin: 15px 0;
+	border-radius: 3px;
+	background-color: $app_color;
+	color: #fff;
+	user-select: none;
+	cursor: pointer;
+	padding: 5px 8px;
+	width: 100%;
+	@include transition();
+	&:hover {
+		background-color: rgba($app_color, 0.9);
+	}
+}
+
+input[type=file]{
+	border: none;
+}
+
+.image_container {
+	&:nth-child(odd) {
+		background-color: #ddd;
+	}
+	&:nth-child(even) {
+		background-color: #fff;
+	}
+	&:hover {
+		background-color: #ccc;
+	}
+	@include transition;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	height: 150px;
+	width: 100%;
+}

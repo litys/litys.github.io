@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image 2 jpg converter & compressor</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="image">
+                <div id="result"></div>
+                <div id="canvas_box"></div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="actions">
+                <div>
+                    <div id="quality_div" class="action_row">
+                        <label for="quality">Quality: <span id="quality_value">0.7</span> </label>
+                        <input type="range" min="0" max="100" value="70" id="quality" oninput="change_quality()">
+                    </div>
+                    <div id="scale_div" class="action_row">
+                        <label for="scale">Size: <span id="scale_value">1</span> </label>
+                        <input type="range" min="0" max="100" value="100" id="scale" oninput="change_size()">
+                    </div>
+                </div>
+                <div class="actions_btns">
+                    <div class="action_row">
+                        Select images:
+                        <input type="file" id="input" multiple accept="image/*"/>
+                    </div>
+                    <div id="link_div" class="link">
+                        <div onclick="convert()" class="convert_btn">Convert images</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>

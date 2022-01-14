@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Biblioteka css, xass">
+    <meta name="description" content="Xass - biblioteka CSS">
+    <meta name="author" content="litys.github.io">
+    <meta name="theme-color" content="#00245d">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" href="../favicon.png">
+    <title>Xass</title>
+</head>
+
+<body>
+    <div class="menu xs_none sm_block">
+        <a href="./css/xass.min.css" download="xass.css">
+            <div class="download x_center">
+                Pobierz XASS<br>
+                <span>Tylko 10kb</span>
+            </div>
+        </a>
+        <hr>
+        <ul>
+            <li>
+                <a href="#general">Ogólne zastosowanie</a>
+            </li>
+            <li>
+                <a href="#grid">Grid</a>
+            </li>
+            <li>
+                <a href="#column">Kolumny</a>
+            </li>
+            <li>
+                <a href="#positions">Pozycjonowanie</a>
+            </li>
+            <li>
+                <a href="#offset">Offset</a>
+            </li>
+            <li>
+                <a href="#help">Klasy pomocnicze</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul>
+            <li>
+                <a href="#global">Klasy globalne</a>
+            </li>
+            <li>
+                <a href="#display">Display</a>
+            </li>
+            <li>
+                <a href="#margin">Marginesy</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul>
+            <li>
+                <a href="#collapse">Collapse</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="content">
+        <div class="container">
+
+            <div class="x_row" id="general">
+                <div class="xs12 sm6">
+                    <h1>Ogólne zastosowanie</h1>
+                    <p>
+                        Klasa <code>.x_container</code> pozwala zdefiniować kontener aplikacji z odstępami i
+                        wyśrodkowaniem.<br>
+                        Chcąc użyć kontenera z pełną szerokością z zachowaniem marginesów należy użyć
+                        <code>.x_container_fluid</code>.
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_container&#x22;&#x3E;
+    &#x3C;!-- Zawartość --&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+
+            <hr>
+            <div class="x_row" id="grid">
+                <div class="xs12 sm6">
+                    <h1>Grid</h1>
+                    <p>
+                        Klasa <code>.x_row</code> definiuje rząd.<br>
+                        Klasy <code>.xs12 .sm12 .md12</code> oraz <code>lg12</code> definiują kolumny.<br>
+                        Każdy rząd składa się z 12 kolumn.<br>
+                        By odwrócić rząd wystarczy posłużyć się klasą <code>.reverse</code>.
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_row reverse&#x22;&#x3E;
+    &#x3C;div class=&#x22;xs12 sm8 md6 lg4&#x22;&#x3E;
+        &#x3C;!-- Zawartość --&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;xs12 sm4 md6 lg8&#x22;&#x3E;
+        &#x3C;!-- Zawartość --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+            <hr>
+            <div class="x_row" id="column">
+                <div class="xs12 sm6">
+                    <h1>Kolumny</h1>
+                    <p>
+                        By z wierza zrobić kolumny wystarczy dodać klasę <code>.column</code>.<br>
+                        Żeby odwrócić kolumny wystarczy dać klasę <code>.reverse_column</code>.<br>
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_row reverse_column&#x22;&#x3E;
+    &#x3C;!-- Zawartość --&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+            <hr>
+            <div class="x_row" id="positions">
+                <div class="xs12 sm6">
+                    <h1>Pozycjonowanie</h1>
+                    <p>
+                        Do szybkiego ustawiania elementów służą klasy:<br>
+                        <code>
+                            .justify_start <br>
+                            .justify_center <br>
+                            .justify_end <br>
+                            .justify_between <br>
+                            .justify_around <br>
+                            .justify_evenly
+                        </code><br>
+                        oraz<br>
+                        <code>
+                            .align_start <br>
+                            .align_center <br>
+                            .align_end <br>
+                            .align_stretch <br>
+                            .align_baseline
+                        </code><br><br>
+                        Należy pamiętać że klasy te działają tylko z klasą <code>.x_row</code>.<br>
+                        Klasy <b>justify</b> pozycjonują zawartość a <b>align</b> elementy.
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_row justify_center align_start&#x22;&#x3E;
+    &#x3C;!-- Zawartość --&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+            <hr>
+            <div class="x_row" id="offset">
+                <div class="xs12 sm6">
+                    <h1>Offset</h1>
+                    <p>
+                        Należy do rozdzielczości dopisać 'offset' oraz ile kolumn ma zawierać odstęp, np.
+                        <code>.xs_offset4</code><br>
+                        Dyrektywy offset można użyć dla każdej rozdzielczości.
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_row&#x22;&#x3E;
+    &#x3C;div class=&#x22;xs12 md_offset6 md6 lg_offset4 lg8&#x22;&#x3E;
+        &#x3C;!-- Zawartość --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+
+            <hr>
+            <div class="x_row" id="help">
+                <div class="xs12 sm6">
+                    <h1>Klasy pomocnicze</h1>
+                    <p>
+                        Do dyspozycji dla kolumn są jeszcze klady pomocnicze dla każdej rozdzielczości;<br>
+                        <code>
+                            .start_md
+                        </code> - justify-content: flex-start; text-align: start; <br>
+                        <code>
+                            .center_md
+                        </code> - justify-content: center; text-align: center; <br>
+                        <code>
+                            .end_md
+                        </code> -justify-content: flex-end; text-align: end; <br>
+                        <code>
+                            .top_md
+                        </code> - align-items: flex-start; <br>
+                        <code>
+                            .middle_md
+                        </code> - align-items: center; <br>
+                        <code>
+                            .bottom_md
+                        </code> - align-items: flex-end; <br>
+                        <code>
+                            .around_md
+                        </code> - justify-content: space-around; <br>
+                        <code>
+                            .between_md
+                        </code> justify-content: space-between; <br>
+                        <code>
+                            .first_md
+                        </code> - order: -1; <br>
+                        <code>
+                            .last_md
+                        </code> - order: 1; <br>
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_row&#x22;&#x3E;
+    &#x3C;div class=&#x22;xs12 center_xs md6 end_md&#x22;&#x3E;
+        &#x3C;!-- Zawartość --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+            <hr>
+            <div class="x_row" id="global">
+                <div class="xs12">
+                    <h1>Klasy działające globalnie</h1>
+                    <p>
+                        Biblioteka również zawiera klasy działające niezależnie od <code>.x_row</code>.<br>
+                        <code>.x_center</code> - Wyśrodkowanie tekstu.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+            <hr>
+            <div class="x_row" id="display">
+                <div class="xs12 sm6">
+                    <h1>Display</h1>
+                    <p>
+                        Dla wygody kolumny można ukrywać na wybranych rozdzielczościach dyrektywami <b>none, block</b>
+                        oraz <b>flex</b> po nazwie rozdzielczości.<br>
+                        Np. <code>.sm_block .md_flex .lg_none  </code>.<br><br>
+                        Klasa niezależna od <code>.x_row</code>.
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_row&#x22;&#x3E;
+    &#x3C;div class=&#x22;xs_none md_block md12&#x22;&#x3E;
+        &#x3C;!-- Zawartość --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+
+            <hr>
+            <div class="x_row" id="margin">
+                <div class="xs12 sm6">
+                    <h1>Marginesy</h1>
+                    <p>
+                        Marginesy są dostępne pod klasami <code>.x_mt1 .x_mt2 .x_mt3 .x_mt4 .x_mt5</code> gdzie <b>m</b>
+                        oznacza margines, <b>t</b> oznacza pozycje marginesu (w tym przypadku <i>top</i>) oraz liczba od
+                        1-5 która definiuje wielkość odstępu.<br>
+                        Marginesy z każdej strony uzyskujemy <code>x_m4</code>.<br>
+                        Analogicznie sprawa się ma z odstępnami, np. <code>.x_pr3</code> (padding-right: 15px).<br>
+                        Do automatycznych marginesów służy <code>.x_m</code>.
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;div class=&#x22;x_m x_p4&#x22;&#x3E;
+    &#x3C;div class=&#x22;x_pt5 x_pr2 x_pb5 x_pl2&#x22;&#x3E;
+        &#x3C;!-- Zawartość --&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+                </div>
+            </div>
+
+
+
+            <hr>
+            <div class="x_row" id="margin">
+                <div class="xs12 sm6">
+                    <h1>Collapse</h1>
+                    <p>
+                        Listę zwijaną tworzymy dodając klasę <code>.x_collapse</code>.<br>
+                        Element musi posiadać unikalne ID (np. <code>#nav</code>)<br>
+                        Aby rozwinąć listę należy zrobić odnośnik do tego elementu<br>
+
+                        <a href="#c_collapse">Przykład</a>
+                    <div class="x_collapse" id="c_collapse">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur labore quo et, sed minus
+                        non rerum odit aut expedita ipsum omnis ipsam, sunt repudiandae corrupti repellendus illo id,
+                        voluptates nulla?
+                    </div>
+                    </p>
+                </div>
+                <div class="xs12 sm6">
+                    <pre>
+&#x3C;a href=&#x22;#nav&#x22;&#x3E;&#x3C;/a&#x3E;
+&#x3C;div class=&#x22;x_collapse&#x22; id=&#x22;nav&#x22;&#x3E;
+    &#x3C;!-- Zawartość --&#x3E;
+&#x3C;/div&#x3E;
+</pre>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

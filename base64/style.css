@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+:root {
+  --border-radius: 7px;
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+h1 {
+  text-align: center;
+}
+#imageUpload {
+  border:4px solid #555;
+  border-radius: var(--border-radius);
+  margin: 50px auto;
+  width:50vw;
+  max-width:400px;
+  height:25vh;
+  position:relative;
+  line-height:5vh;
+  outline:0 none;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#imageUpload:empty::before {
+  content:'Click and then paste copied image (Ctrl+V/⌘+V).';
+  font-size:3vh;
+  position:absolute;
+  width:90%;
+  display:inline-block;
+  color:#ccc;
+  top:50%;
+  transform:translatey(-50%);
+  left:5%;
+  z-index:-1;
+}
+
+#imageUpload:focus::before{
+    color:transparent;
+}
+
+textarea {
+  max-width: 90%;
+  margin: auto;
+  width: 960px;
+  border-radius: var(--border-radius);
+}

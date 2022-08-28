@@ -41,7 +41,7 @@ const setTimer = () => {
 
 const deleteEvent = () => {
 	const deleteID = document.getElementById( 'delete-id' ).value;
-	if ( deleteID > 1 && deleteID < 1000 ) {
+	if ( deleteID > 0 && deleteID < 1000 ) {
 		timers.splice(deleteID - 1, 1)
 		localStorage.setItem('timers', JSON.stringify(timers));
 		window.location.reload(true);

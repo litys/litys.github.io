@@ -1,13 +1,4 @@
-let timers = [
-	{
-		title: 'testowy timer 1',
-		time: "Jan 5, 2024 15:37:25"
-	},
-	{
-		title: 'testowy timer 2',
-		time: "2023-01-05T15:37"
-	}
-]
+let timers = []
 
 const setTimer = () => {
 	timers.forEach( (timer, index) => {
